@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [com.bt.og.testpages.SanityTest]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.bt.og.testpages.SanityTest">
+        <methods>
+          <include name="test014_04_PhoneUScatalogue" invocation-numbers="0"/>
+          <include name="test007_06_RegisterThirdPartyEmail"/>
+          <include name="test010_ITEquipmentProducts" invocation-numbers="0"/>
+          <include name="test005_CustomerDetailsContinueButton"/>
+          <include name="test007_02_FunctionalAccount"/>
+          <include name="test012_01_CSSProduction"/>
+          <include name="test012_03_OneViewChangesToProfile"/>
+          <include name="test012_02_IUSERDomainGroupConnection"/>
+          <include name="test013_03_searchProduct" invocation-numbers="0"/>
+          <include name="test016_AlternateAddressEINValidation" invocation-numbers="0"/>
+          <include name="test007_04_IncomingFax"/>
+          <include name="tearDown"/>
+          <include name="test007_01_StandardEmailAccount"/>
+          <include name="test013_02__RemoveUneededSoftware" invocation-numbers="0"/>
+          <include name="test013_04_AtoZLink"/>
+          <include name="test007_03_EnterPriseMessenger"/>
+          <include name="test011_NonITEquipmentProducts" invocation-numbers="0"/>
+          <include name="test004_CustomerDetails" invocation-numbers="0"/>
+          <include name="test015_02_ErrorPreviousDate" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="test013_01_ProvideNewSoftware" invocation-numbers="0"/>
+          <include name="test014_01_CheckAllPhoneProductItemDisplayed"/>
+          <include name="test014_03_searchPhoneProduct" invocation-numbers="0"/>
+          <include name="test015_01_ErrorWeekendDate" invocation-numbers="0"/>
+          <include name="test014_02_PhoneProducts" invocation-numbers="0"/>
+          <include name="test002_InvalidLogin"/>
+          <include name="test003_OrderSearch"/>
+        </methods>
+      </class> <!-- com.bt.og.testpages.SanityTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [com.bt.og.testpages.SanityTest] -->

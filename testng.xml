@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Order Gateway Application Test Automation Test Suite" parallel="tests" thread-count="2">
+	<listeners>
+		<listener class-name="com.bt.og.listner.ExtentReportListener"></listener>
+		<listener class-name="com.bt.og.retrylistners.MyTransformer"></listener>
+	</listeners>
+	<test name="Order gateway Test">
+		<classes>		
+			<class name="com.bt.og.testpages.Regression"></class>
+		</classes>	
+	</test> <!-- com.bt.og.testpages.RegressionTest -->
+</suite>
