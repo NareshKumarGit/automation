@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -33,18 +32,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-
 import com.bt.og.listner.WebEventListener;
 import com.bt.og.pages.LoginPage;
 import com.bt.og.utility.Constant;
 
+/**
+* @author UIN 612092646 Naresh Kumar
+*/
+
 public class TestBase {
-	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
+	
 	public static WebDriver driver;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	public static WebDriverWait wait;
+	public static final Logger logger = Logger.getLogger(TestBase.class.getName());
 
 	public TestBase() {
 		try {
@@ -59,13 +62,13 @@ public class TestBase {
 		}
 	}
 
-	// Initialising the browser
-	public void initialise() {
-		if (Constant.browser.equalsIgnoreCase("chrome")) {
+	// Initializing the browser
+	public void initialise(String browser, String version) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-		} else if (Constant.browser.equalsIgnoreCase("ie")) {
+		} else if (browser.equalsIgnoreCase("ie")) {
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + "\\drivers\\IEDriverServer.exe");
 			DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
 			cap.setCapability("nativeEvents", false);
@@ -83,13 +86,17 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(Constant.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(Constant.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-
+		driver.get(Constant.DEV_URL);
+		WebElement imAmOnWebtop = driver.findElement(By.xpath(".//button"));
+		click(imAmOnWebtop);
+		LoginPage loginPage = new LoginPage();
+		waitForElementToBeVisible(loginPage.einTxtBox, 60);
+		
 		if (Constant.setup_Dev == true) {
 			driver.get(Constant.DEV_URL);
 			new21CAuthPage();
-
 		}
-		if (Constant.setup_Prod == true) {
+		if (Constant.setup_Prod == false) {
 			driver.get(Constant.Prod_URL);
 			old21CAuthPage();
 		}

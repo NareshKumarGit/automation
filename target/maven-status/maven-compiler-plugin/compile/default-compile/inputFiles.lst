@@ -6,7 +6,6 @@ D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\CheckOut.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\EmailAndIMPage.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\utility\ExcelUtility.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\OrderConfirmationPage.java
-D:\Laptop backup files\automation\src\main\java\com\bt\og\utility\AdminResubmitionOfOrder.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\ITEquipmentPage.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\retrylistners\RetryAnalyser.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\ProductListPage.java
@@ -15,8 +14,6 @@ D:\Laptop backup files\automation\src\main\java\com\bt\og\base\TestBase.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\utility\VerifyLink.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\CustomerDetailsPage.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\LoginPage.java
-D:\Laptop backup files\automation\src\main\java\com\bt\og\utility\ResubmitOrder.java
-D:\Laptop backup files\automation\src\main\java\com\bt\og\utility\SanityTest.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\SearchForAnOrderPage.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\pages\NewEmployeePage.java
 D:\Laptop backup files\automation\src\main\java\com\bt\og\listner\ExtentReportListener.java

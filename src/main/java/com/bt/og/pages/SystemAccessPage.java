@@ -53,39 +53,6 @@ public class SystemAccessPage extends TestBase {
 			}
 		}
 		list.clear();
-		WebElement submitBtn = driver.findElement(By.name("btn_Submit"));
-		WebElement backBtn = driver.findElement(By.name("btn_Back"));
-		WebElement selectAllbtn = driver.findElement(By.name("btn_All"));
-		if (submitBtn.isDisplayed() && backBtn.isDisplayed() && selectAllbtn.isDisplayed()) {
-			Assert.assertTrue(true);
-		} else {
-			Assert.assertTrue(false, "All buttons not displayed.");
-		}
-		click(submitBtn);
-		WebElement submitBtn2 = driver.findElement(By.name("btn_Submit"));
-		waitForElementToBeVisible(submitBtn2, 10);
-		list = driver.findElements(By.xpath(".//input[@type='radio']"));
-		for (WebElement eL : list) {
-			click(eL);
-		}
-		list.clear();
-		WebElement actn = driver.findElement(By.name("UserID"));
-		click(actn);
-		WebElement profile = driver.findElement(By.id("Profile"));
-		Select select = new Select(profile);
-		list = select.getOptions();
-		for (WebElement eL : list) {
-			select.selectByVisibleText(eL.getText());
-		}
-		WebElement textArea = driver.findElement(By.id("QID2324"));
-		type(textArea, "Test order");
-
-		click(submitBtn2);
-		switchToFramePFFrame();
-		waitForElementToBeVisible(shoppingBasket.emptyBasketBtn, 10);
-		boolean result = shoppingBasket.searchForProductInTable("WESTWARD CSS");
-		Assert.assertTrue(result, "Product not added to basket.");
-		shoppingBasket.emptyBasket();
 	}
 
 	public void IUSERDomainGroupConnection() {
@@ -117,40 +84,8 @@ public class SystemAccessPage extends TestBase {
 			click(eL);
 		}
 		list.clear();
-		String parent = driver.getWindowHandle();
-
-		// Please check the box to confirm application help has been read before
-		// ordering
-		WebElement confirmChkbox = driver.findElement(By.id("QID2223_0"));
-		confirmChkbox.click();
-		WebElement groupfield1 = driver.findElement(By.name("QID3284"));
-		type(groupfield1, "apd - Enterprise Nerve Centre User KUL");
-		WebElement searchBtn = driver.findElement(By.xpath(".//div[@id='QID3284']//a[@class='button']"));
-
-		click(searchBtn);
-		wait(5000);
-		Set<String> child = driver.getWindowHandles();
-		for (String window : child) {
-			if (!parent.equals(window)) {
-				try {
-					driver.switchTo().window(window);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-				// Select select = new Select(driver.findElement(By.id("SelectGroup")));
-				// select.selectByIndex(2);
-				clickButton("btn_SelectOk");
-			}
-		}
-		driver.switchTo().window(parent);
-		switchToFramePFFrame();
-
-		click(submitBtn2);
-		switchToFramePFFrame();
-		waitForElementToBeVisible(shoppingBasket.emptyBasketBtn, 10);
-		boolean result = shoppingBasket.searchForProductInTable("IUSER Domain(Group Connection)");
-		Assert.assertTrue(result, "Product not added to basket.");
-		shoppingBasket.emptyBasket();
+		
+	
 	}
 
 	public void RemoteAccessAuthenticationTokenActivIdentity() {
@@ -252,13 +187,7 @@ public class SystemAccessPage extends TestBase {
 		select.selectByVisibleText("Yes");
 		select = new Select(driver.findElement(By.id("QID2591")));
 		select.selectByVisibleText("Yes");
-		type(driver.findElement(By.id("QID2592")), "612092646");
-		select = new Select(driver.findElement(By.id("QID2583")));
-		select.selectByVisibleText("Yes");
-		type(driver.findElement(By.id("QID2582")), "Test");
-		select = new Select(driver.findElement(By.id("QID2587")));
-		select.selectByVisibleText("No");
-
+		
 	}
 
 }

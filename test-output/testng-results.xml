@@ -1,739 +1,846 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="13" total="30" passed="17">
+<testng-results skipped="0" failed="2" total="31" passed="29">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63966" started-at="2022-07-14T10:43:08Z" finished-at="2022-07-14T10:44:12Z">
+  <suite name="Order Gateway Application Test Automation Test Suite" duration-ms="739496" started-at="2022-07-19T06:54:34Z" finished-at="2022-07-19T07:06:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63966" started-at="2022-07-14T10:43:08Z" finished-at="2022-07-14T10:44:12Z">
-      <class name="com.bt.og.testpages.SanityTest">
-        <test-method status="FAIL" signature="test001_ValidLogin(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test001_ValidLogin" duration-ms="0" started-at="2022-07-14T16:13:08Z" data-provider="validLoginData" finished-at="2022-07-14T16:13:08Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+    <test name="Order gateway Test" duration-ms="739496" started-at="2022-07-19T06:54:34Z" finished-at="2022-07-19T07:06:54Z">
+      <class name="com.bt.og.testpages.Regression">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="14597" started-at="2022-07-19T12:24:35Z" finished-at="2022-07-19T12:24:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test001_ValidLogin(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test001_ValidLogin" duration-ms="3737" started-at="2022-07-19T12:24:49Z" data-provider="validLoginData" finished-at="2022-07-19T12:24:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[802766791]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Colin Fletcher]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test001_ValidLogin -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="4138" started-at="2022-07-14T16:13:08Z" finished-at="2022-07-14T16:13:12Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="628" started-at="2022-07-19T12:24:53Z" finished-at="2022-07-19T12:24:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test001_ValidLogin status=SUCCESS method=Regression.test001_ValidLogin(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12980" started-at="2022-07-19T12:24:53Z" finished-at="2022-07-19T12:25:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test002_InvalidLogin()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test002_InvalidLogin" duration-ms="0" started-at="2022-07-14T16:13:12Z" finished-at="2022-07-14T16:13:12Z">
+        <test-method status="PASS" signature="test002_InvalidLogin()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test002_InvalidLogin" duration-ms="616" started-at="2022-07-19T12:25:06Z" finished-at="2022-07-19T12:25:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test002_InvalidLogin -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="548" started-at="2022-07-14T16:13:12Z" finished-at="2022-07-14T16:13:12Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="651" started-at="2022-07-19T12:25:07Z" finished-at="2022-07-19T12:25:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test002_InvalidLogin status=SUCCESS method=SanityTest.test002_InvalidLogin()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test002_InvalidLogin status=SUCCESS method=Regression.test002_InvalidLogin()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3209" started-at="2022-07-14T16:13:12Z" finished-at="2022-07-14T16:13:16Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12877" started-at="2022-07-19T12:25:08Z" finished-at="2022-07-19T12:25:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="555" started-at="2022-07-14T16:13:16Z" finished-at="2022-07-14T16:13:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test003_OrderSearch status=SUCCESS method=SanityTest.test003_OrderSearch()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test003_OrderSearch()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test003_OrderSearch" duration-ms="0" started-at="2022-07-14T16:13:16Z" finished-at="2022-07-14T16:13:16Z">
+        <test-method status="PASS" signature="test003_OrderSearch()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test003_OrderSearch" duration-ms="24464" started-at="2022-07-19T12:25:21Z" finished-at="2022-07-19T12:25:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test003_OrderSearch -->
-        <test-method status="FAIL" signature="test004_CustomerDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test004_CustomerDetails" duration-ms="0" started-at="2022-07-14T16:13:16Z" data-provider="customerDetailsData" finished-at="2022-07-14T16:13:16Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="651" started-at="2022-07-19T12:25:45Z" finished-at="2022-07-19T12:25:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test003_OrderSearch status=SUCCESS method=Regression.test003_OrderSearch()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13027" started-at="2022-07-19T12:25:46Z" finished-at="2022-07-19T12:25:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="test004_CustomerDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test004_CustomerDetails" duration-ms="3933" started-at="2022-07-19T12:25:59Z" data-provider="customerDetailsData" finished-at="2022-07-19T12:26:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Colin Fletcher]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TNA7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0748 316 9740]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[FLETCHCA]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[802766791]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[C00]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[GB]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+OUC not mactching, Phone number not mactching, Company indicator not mactching]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+OUC not mactching, Phone number not mactching, Company indicator not mactching
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at com.bt.og.testpages.Regression.test004_CustomerDetails(Regression.java:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
 	at org.testng.TestRunner.run(TestRunner.java:617)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test004_CustomerDetails -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3456" started-at="2022-07-14T16:13:16Z" finished-at="2022-07-14T16:13:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="548" started-at="2022-07-14T16:13:20Z" finished-at="2022-07-14T16:13:20Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="832" started-at="2022-07-19T12:26:03Z" finished-at="2022-07-19T12:26:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test005_CustomerDetailsContinueButton status=SUCCESS method=SanityTest.test005_CustomerDetailsContinueButton()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test004_CustomerDetails status=FAILURE method=Regression.test004_CustomerDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test005_CustomerDetailsContinueButton()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test005_CustomerDetailsContinueButton" duration-ms="0" started-at="2022-07-14T16:13:20Z" finished-at="2022-07-14T16:13:20Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12341" started-at="2022-07-19T12:26:04Z" finished-at="2022-07-19T12:26:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="FAIL" signature="test004_CustomerDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test004_CustomerDetails" duration-ms="3835" started-at="2022-07-19T12:26:16Z" data-provider="customerDetailsData" finished-at="2022-07-19T12:26:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Colin Fletcher]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TNA7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[0748 316 9740]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[FLETCHCA]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[802766791]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[C00]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[GB]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+OUC not mactching, Phone number not mactching, Company indicator not mactching]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+OUC not mactching, Phone number not mactching, Company indicator not mactching
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:37)
+	at com.bt.og.testpages.Regression.test004_CustomerDetails(Regression.java:169)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:1049)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1254)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test004_CustomerDetails -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="818" started-at="2022-07-19T12:26:20Z" finished-at="2022-07-19T12:26:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test004_CustomerDetails status=FAILURE method=Regression.test004_CustomerDetails(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12722" started-at="2022-07-19T12:26:21Z" finished-at="2022-07-19T12:26:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test005_CustomerDetailsContinueButton()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test005_CustomerDetailsContinueButton" duration-ms="4002" started-at="2022-07-19T12:26:33Z" finished-at="2022-07-19T12:26:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test005_CustomerDetailsContinueButton -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2824" started-at="2022-07-14T16:13:20Z" finished-at="2022-07-14T16:13:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="552" started-at="2022-07-14T16:13:23Z" finished-at="2022-07-14T16:13:24Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="641" started-at="2022-07-19T12:26:37Z" finished-at="2022-07-19T12:26:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test006_VerifyAllTabs status=SUCCESS method=SanityTest.test006_VerifyAllTabs()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test005_CustomerDetailsContinueButton status=SUCCESS method=Regression.test005_CustomerDetailsContinueButton()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test006_VerifyAllTabs()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test006_VerifyAllTabs" duration-ms="0" started-at="2022-07-14T16:13:23Z" finished-at="2022-07-14T16:13:23Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12477" started-at="2022-07-19T12:26:38Z" finished-at="2022-07-19T12:26:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test006_VerifyAllTabs()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test006_VerifyAllTabs" duration-ms="37731" started-at="2022-07-19T12:26:50Z" finished-at="2022-07-19T12:27:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test006_VerifyAllTabs -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3424" started-at="2022-07-14T16:13:24Z" finished-at="2022-07-14T16:13:27Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="636" started-at="2022-07-19T12:27:28Z" finished-at="2022-07-19T12:27:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test006_VerifyAllTabs status=SUCCESS method=Regression.test006_VerifyAllTabs()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13055" started-at="2022-07-19T12:27:29Z" finished-at="2022-07-19T12:27:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test007_01_StandardEmailAccount()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test007_01_StandardEmailAccount" duration-ms="0" started-at="2022-07-14T16:13:27Z" finished-at="2022-07-14T16:13:27Z">
+        <test-method status="PASS" signature="test007_01_StandardEmailAccount()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test007_01_StandardEmailAccount" duration-ms="16932" started-at="2022-07-19T12:27:42Z" finished-at="2022-07-19T12:27:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test007_01_StandardEmailAccount -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="547" started-at="2022-07-14T16:13:27Z" finished-at="2022-07-14T16:13:28Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="663" started-at="2022-07-19T12:27:59Z" finished-at="2022-07-19T12:27:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test007_01_StandardEmailAccount status=SUCCESS method=SanityTest.test007_01_StandardEmailAccount()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test007_01_StandardEmailAccount status=SUCCESS method=Regression.test007_01_StandardEmailAccount()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3163" started-at="2022-07-14T16:13:28Z" finished-at="2022-07-14T16:13:31Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12491" started-at="2022-07-19T12:27:59Z" finished-at="2022-07-19T12:28:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="537" started-at="2022-07-14T16:13:31Z" finished-at="2022-07-14T16:13:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test007_02_FunctionalAccount status=SUCCESS method=SanityTest.test007_02_FunctionalAccount()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test007_02_FunctionalAccount()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test007_02_FunctionalAccount" duration-ms="0" started-at="2022-07-14T16:13:31Z" finished-at="2022-07-14T16:13:31Z">
+        <test-method status="PASS" signature="test007_02_FunctionalAccount()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test007_02_FunctionalAccount" duration-ms="5109" started-at="2022-07-19T12:28:12Z" finished-at="2022-07-19T12:28:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test007_02_FunctionalAccount -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3607" started-at="2022-07-14T16:13:31Z" finished-at="2022-07-14T16:13:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="533" started-at="2022-07-14T16:13:35Z" finished-at="2022-07-14T16:13:35Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="647" started-at="2022-07-19T12:28:17Z" finished-at="2022-07-19T12:28:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test007_03_EnterPriseMessenger status=SUCCESS method=SanityTest.test007_03_EnterPriseMessenger()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test007_02_FunctionalAccount status=SUCCESS method=Regression.test007_02_FunctionalAccount()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test007_03_EnterPriseMessenger()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test007_03_EnterPriseMessenger" duration-ms="0" started-at="2022-07-14T16:13:35Z" finished-at="2022-07-14T16:13:35Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12587" started-at="2022-07-19T12:28:18Z" finished-at="2022-07-19T12:28:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test007_03_EnterPriseMessenger()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test007_03_EnterPriseMessenger" duration-ms="22498" started-at="2022-07-19T12:28:30Z" finished-at="2022-07-19T12:28:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test007_03_EnterPriseMessenger -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3046" started-at="2022-07-14T16:13:35Z" finished-at="2022-07-14T16:13:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="532" started-at="2022-07-14T16:13:39Z" finished-at="2022-07-14T16:13:39Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="645" started-at="2022-07-19T12:28:53Z" finished-at="2022-07-19T12:28:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test007_04_IncomingFax status=SUCCESS method=SanityTest.test007_04_IncomingFax()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test007_03_EnterPriseMessenger status=SUCCESS method=Regression.test007_03_EnterPriseMessenger()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test007_04_IncomingFax()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test007_04_IncomingFax" duration-ms="0" started-at="2022-07-14T16:13:39Z" finished-at="2022-07-14T16:13:39Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13201" started-at="2022-07-19T12:28:53Z" finished-at="2022-07-19T12:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test007_04_IncomingFax()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test007_04_IncomingFax" duration-ms="16744" started-at="2022-07-19T12:29:07Z" finished-at="2022-07-19T12:29:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test007_04_IncomingFax -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3124" started-at="2022-07-14T16:13:39Z" finished-at="2022-07-14T16:13:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="539" started-at="2022-07-14T16:13:42Z" finished-at="2022-07-14T16:13:43Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="665" started-at="2022-07-19T12:29:23Z" finished-at="2022-07-19T12:29:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test007_05_EmailAddressChange status=SUCCESS method=SanityTest.test007_05_EmailAddressChange()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test007_04_IncomingFax status=SUCCESS method=Regression.test007_04_IncomingFax()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test007_05_EmailAddressChange()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test007_05_EmailAddressChange" duration-ms="0" started-at="2022-07-14T16:13:42Z" finished-at="2022-07-14T16:13:42Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12770" started-at="2022-07-19T12:29:24Z" finished-at="2022-07-19T12:29:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test007_05_EmailAddressChange()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test007_05_EmailAddressChange" duration-ms="7166" started-at="2022-07-19T12:29:37Z" finished-at="2022-07-19T12:29:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test007_05_EmailAddressChange -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2993" started-at="2022-07-14T16:13:43Z" finished-at="2022-07-14T16:13:46Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="664" started-at="2022-07-19T12:29:44Z" finished-at="2022-07-19T12:29:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test007_05_EmailAddressChange status=SUCCESS method=Regression.test007_05_EmailAddressChange()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12438" started-at="2022-07-19T12:29:45Z" finished-at="2022-07-19T12:29:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test007_06_RegisterThirdPartyEmail()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test007_06_RegisterThirdPartyEmail" duration-ms="0" started-at="2022-07-14T16:13:46Z" finished-at="2022-07-14T16:13:46Z">
+        <test-method status="PASS" signature="test007_06_RegisterThirdPartyEmail()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test007_06_RegisterThirdPartyEmail" duration-ms="16700" started-at="2022-07-19T12:29:57Z" finished-at="2022-07-19T12:30:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test007_06_RegisterThirdPartyEmail -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="532" started-at="2022-07-14T16:13:46Z" finished-at="2022-07-14T16:13:46Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="650" started-at="2022-07-19T12:30:14Z" finished-at="2022-07-19T12:30:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test007_06_RegisterThirdPartyEmail status=SUCCESS method=SanityTest.test007_06_RegisterThirdPartyEmail()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test007_06_RegisterThirdPartyEmail status=SUCCESS method=Regression.test007_06_RegisterThirdPartyEmail()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2981" started-at="2022-07-14T16:13:46Z" finished-at="2022-07-14T16:13:49Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12335" started-at="2022-07-19T12:30:14Z" finished-at="2022-07-19T12:30:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test008_UKITEquipment()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test008_UKITEquipment" duration-ms="0" started-at="2022-07-14T16:13:49Z" finished-at="2022-07-14T16:13:49Z">
+        <test-method status="PASS" signature="test008_UKITEquipment()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test008_UKITEquipment" duration-ms="7084" started-at="2022-07-19T12:30:27Z" finished-at="2022-07-19T12:30:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test008_UKITEquipment -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="532" started-at="2022-07-14T16:13:49Z" finished-at="2022-07-14T16:13:50Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="648" started-at="2022-07-19T12:30:34Z" finished-at="2022-07-19T12:30:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test008_UKITEquipment status=SUCCESS method=SanityTest.test008_UKITEquipment()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test008_UKITEquipment status=SUCCESS method=Regression.test008_UKITEquipment()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2998" started-at="2022-07-14T16:13:50Z" finished-at="2022-07-14T16:13:53Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12306" started-at="2022-07-19T12:30:34Z" finished-at="2022-07-19T12:30:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="549" started-at="2022-07-14T16:13:53Z" finished-at="2022-07-14T16:13:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test009_NonUKITEquipment status=SUCCESS method=SanityTest.test009_NonUKITEquipment()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test009_NonUKITEquipment()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test009_NonUKITEquipment" duration-ms="0" started-at="2022-07-14T16:13:53Z" finished-at="2022-07-14T16:13:53Z">
+        <test-method status="PASS" signature="test009_NonUKITEquipment()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test009_NonUKITEquipment" duration-ms="13685" started-at="2022-07-19T12:30:47Z" finished-at="2022-07-19T12:31:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test009_NonUKITEquipment -->
-        <test-method status="FAIL" signature="test010_ITEquipmentProducts(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test010_ITEquipmentProducts" duration-ms="0" started-at="2022-07-14T16:13:53Z" data-provider="ITEquipmentData" finished-at="2022-07-14T16:13:53Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="664" started-at="2022-07-19T12:31:00Z" finished-at="2022-07-19T12:31:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test009_NonUKITEquipment status=SUCCESS method=Regression.test009_NonUKITEquipment()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13331" started-at="2022-07-19T12:31:01Z" finished-at="2022-07-19T12:31:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test010_ITEquipmentProducts(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test010_ITEquipmentProducts" duration-ms="1" started-at="2022-07-19T12:31:14Z" data-provider="ITEquipmentData" finished-at="2022-07-19T12:31:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Desktop PCs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lenovo ThinkCentre M910s SFF - BT Webtop Build]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test010_ITEquipmentProducts -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2956" started-at="2022-07-14T16:13:53Z" finished-at="2022-07-14T16:13:56Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="623" started-at="2022-07-19T12:31:14Z" finished-at="2022-07-19T12:31:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test010_ITEquipmentProducts status=SUCCESS method=Regression.test010_ITEquipmentProducts(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13208" started-at="2022-07-19T12:31:15Z" finished-at="2022-07-19T12:31:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="test011_NonITEquipmentProducts(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test011_NonITEquipmentProducts" duration-ms="0" started-at="2022-07-14T16:13:53Z" data-provider="NonITUKEquipmentData" finished-at="2022-07-14T16:13:53Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="test011_NonITEquipmentProducts(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test011_NonITEquipmentProducts" duration-ms="1" started-at="2022-07-19T12:31:28Z" data-provider="NonITUKEquipmentData" finished-at="2022-07-19T12:31:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PC Accessories]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test011_NonITEquipmentProducts -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="680" started-at="2022-07-14T16:13:56Z" finished-at="2022-07-14T16:13:57Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="633" started-at="2022-07-19T12:31:28Z" finished-at="2022-07-19T12:31:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test012_01_CSSProduction status=SUCCESS method=SanityTest.test012_01_CSSProduction()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test011_NonITEquipmentProducts status=SUCCESS method=Regression.test011_NonITEquipmentProducts(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test012_01_CSSProduction()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test012_01_CSSProduction" duration-ms="0" started-at="2022-07-14T16:13:56Z" finished-at="2022-07-14T16:13:56Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13128" started-at="2022-07-19T12:31:29Z" finished-at="2022-07-19T12:31:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test012_01_CSSProduction()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test012_01_CSSProduction" duration-ms="13417" started-at="2022-07-19T12:31:42Z" finished-at="2022-07-19T12:31:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test012_01_CSSProduction -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3695" started-at="2022-07-14T16:13:57Z" finished-at="2022-07-14T16:14:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="555" started-at="2022-07-14T16:14:01Z" finished-at="2022-07-14T16:14:01Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="652" started-at="2022-07-19T12:31:55Z" finished-at="2022-07-19T12:31:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test012_02_IUSERDomainGroupConnection status=SUCCESS method=SanityTest.test012_02_IUSERDomainGroupConnection()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test012_01_CSSProduction status=SUCCESS method=Regression.test012_01_CSSProduction()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test012_02_IUSERDomainGroupConnection()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test012_02_IUSERDomainGroupConnection" duration-ms="0" started-at="2022-07-14T16:14:01Z" finished-at="2022-07-14T16:14:01Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13063" started-at="2022-07-19T12:31:56Z" finished-at="2022-07-19T12:32:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test012_02_IUSERDomainGroupConnection()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test012_02_IUSERDomainGroupConnection" duration-ms="13029" started-at="2022-07-19T12:32:09Z" finished-at="2022-07-19T12:32:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test012_02_IUSERDomainGroupConnection -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2934" started-at="2022-07-14T16:14:01Z" finished-at="2022-07-14T16:14:04Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="666" started-at="2022-07-19T12:32:22Z" finished-at="2022-07-19T12:32:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test012_02_IUSERDomainGroupConnection status=SUCCESS method=Regression.test012_02_IUSERDomainGroupConnection()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13107" started-at="2022-07-19T12:32:23Z" finished-at="2022-07-19T12:32:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test012_03_OneViewChangesToProfile()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test012_03_OneViewChangesToProfile" duration-ms="0" started-at="2022-07-14T16:14:04Z" finished-at="2022-07-14T16:14:04Z">
+        <test-method status="PASS" signature="test012_03_OneViewChangesToProfile()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test012_03_OneViewChangesToProfile" duration-ms="22870" started-at="2022-07-19T12:32:36Z" finished-at="2022-07-19T12:32:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test012_03_OneViewChangesToProfile -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="532" started-at="2022-07-14T16:14:04Z" finished-at="2022-07-14T16:14:05Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="657" started-at="2022-07-19T12:32:59Z" finished-at="2022-07-19T12:32:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test012_03_OneViewChangesToProfile status=SUCCESS method=SanityTest.test012_03_OneViewChangesToProfile()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test012_03_OneViewChangesToProfile status=SUCCESS method=Regression.test012_03_OneViewChangesToProfile()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="FAIL" signature="test013_01_ProvideNewSoftware(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test013_01_ProvideNewSoftware" duration-ms="0" started-at="2022-07-14T16:14:05Z" data-provider="ProvideNewSoftwareData" finished-at="2022-07-14T16:14:05Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12629" started-at="2022-07-19T12:32:59Z" finished-at="2022-07-19T12:33:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test013_01_ProvideNewSoftware(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test013_01_ProvideNewSoftware" duration-ms="11357" started-at="2022-07-19T12:33:12Z" data-provider="ProvideNewSoftwareData" finished-at="2022-07-19T12:33:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Eclipse]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test013_01_ProvideNewSoftware -->
-        <test-method status="FAIL" signature="test013_02__RemoveUneededSoftware(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test013_02__RemoveUneededSoftware" duration-ms="0" started-at="2022-07-14T16:14:05Z" data-provider="RemoveUneededSoftwareData" finished-at="2022-07-14T16:14:05Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="648" started-at="2022-07-19T12:33:23Z" finished-at="2022-07-19T12:33:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test013_01_ProvideNewSoftware status=SUCCESS method=Regression.test013_01_ProvideNewSoftware(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13165" started-at="2022-07-19T12:33:24Z" finished-at="2022-07-19T12:33:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test013_02__RemoveUneededSoftware(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test013_02__RemoveUneededSoftware" duration-ms="1" started-at="2022-07-19T12:33:37Z" data-provider="RemoveUneededSoftwareData" finished-at="2022-07-19T12:33:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Remove Software From A Webtop PC]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test013_02__RemoveUneededSoftware -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="2941" started-at="2022-07-14T16:14:05Z" finished-at="2022-07-14T16:14:08Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="636" started-at="2022-07-19T12:33:37Z" finished-at="2022-07-19T12:33:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test013_02__RemoveUneededSoftware status=SUCCESS method=Regression.test013_02__RemoveUneededSoftware(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12495" started-at="2022-07-19T12:33:38Z" finished-at="2022-07-19T12:33:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="test013_03_searchProduct(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test013_03_searchProduct" duration-ms="0" started-at="2022-07-14T16:14:05Z" data-provider="SearchSoftProduct" finished-at="2022-07-14T16:14:05Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="test013_03_searchProduct(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test013_03_searchProduct" duration-ms="1" started-at="2022-07-19T12:33:50Z" data-provider="SearchSoftProduct" finished-at="2022-07-19T12:33:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Google Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test013_03_searchProduct -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="540" started-at="2022-07-14T16:14:08Z" finished-at="2022-07-14T16:14:08Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="647" started-at="2022-07-19T12:33:50Z" finished-at="2022-07-19T12:33:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test013_04_AtoZLink status=SUCCESS method=SanityTest.test013_04_AtoZLink()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test013_03_searchProduct status=SUCCESS method=Regression.test013_03_searchProduct(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test013_04_AtoZLink()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test013_04_AtoZLink" duration-ms="0" started-at="2022-07-14T16:14:08Z" finished-at="2022-07-14T16:14:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test013_04_AtoZLink -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="setup" is-config="true" duration-ms="3090" started-at="2022-07-14T16:14:08Z" finished-at="2022-07-14T16:14:11Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12788" started-at="2022-07-19T12:33:51Z" finished-at="2022-07-19T12:34:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="tearDown" is-config="true" duration-ms="549" started-at="2022-07-14T16:14:11Z" finished-at="2022-07-14T16:14:12Z">
+        <test-method status="PASS" signature="test013_04_AtoZLink()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test013_04_AtoZLink" duration-ms="24423" started-at="2022-07-19T12:34:04Z" finished-at="2022-07-19T12:34:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test013_04_AtoZLink -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="655" started-at="2022-07-19T12:34:28Z" finished-at="2022-07-19T12:34:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test014_01_CheckAllPhoneProductItemDisplayed status=SUCCESS method=SanityTest.test014_01_CheckAllPhoneProductItemDisplayed()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20] output={null}]]]>
+                <![CDATA[[TestResult name=test013_04_AtoZLink status=SUCCESS method=Regression.test013_04_AtoZLink()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="test014_01_CheckAllPhoneProductItemDisplayed()[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test014_01_CheckAllPhoneProductItemDisplayed" duration-ms="0" started-at="2022-07-14T16:14:11Z" finished-at="2022-07-14T16:14:11Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12868" started-at="2022-07-19T12:34:29Z" finished-at="2022-07-19T12:34:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test014_01_CheckAllPhoneProductItemDisplayed()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test014_01_CheckAllPhoneProductItemDisplayed" duration-ms="6694" started-at="2022-07-19T12:34:42Z" finished-at="2022-07-19T12:34:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test014_01_CheckAllPhoneProductItemDisplayed -->
-        <test-method status="FAIL" signature="test014_02_PhoneProducts(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test014_02_PhoneProducts" duration-ms="0" started-at="2022-07-14T16:14:12Z" data-provider="PhoneProductsData" finished-at="2022-07-14T16:14:12Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="1262" started-at="2022-07-19T12:34:48Z" finished-at="2022-07-19T12:34:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test014_01_CheckAllPhoneProductItemDisplayed status=SUCCESS method=Regression.test014_01_CheckAllPhoneProductItemDisplayed()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13122" started-at="2022-07-19T12:34:50Z" finished-at="2022-07-19T12:35:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test014_02_PhoneProducts(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test014_02_PhoneProducts" duration-ms="1" started-at="2022-07-19T12:35:03Z" data-provider="PhoneProductsData" finished-at="2022-07-19T12:35:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Phones]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[New COMBI SIM Card]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test014_02_PhoneProducts -->
-        <test-method status="FAIL" signature="test014_04_PhoneUScatalogue(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test014_04_PhoneUScatalogue" duration-ms="0" started-at="2022-07-14T16:14:12Z" data-provider="PhoneUScatalogueData" finished-at="2022-07-14T16:14:12Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="625" started-at="2022-07-19T12:35:03Z" finished-at="2022-07-19T12:35:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test014_02_PhoneProducts status=SUCCESS method=Regression.test014_02_PhoneProducts(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test014_04_PhoneUScatalogue -->
-        <test-method status="FAIL" signature="test015_02_ErrorPreviousDate(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test015_02_ErrorPreviousDate" duration-ms="0" started-at="2022-07-14T16:14:12Z" data-provider="ErrorDate" finished-at="2022-07-14T16:14:12Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12639" started-at="2022-07-19T12:35:03Z" finished-at="2022-07-19T12:35:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test015_02_ErrorPreviousDate -->
-        <test-method status="FAIL" signature="test015_01_ErrorWeekendDate(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test015_01_ErrorWeekendDate" duration-ms="0" started-at="2022-07-14T16:14:12Z" data-provider="ErrorDate" finished-at="2022-07-14T16:14:12Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test015_01_ErrorWeekendDate -->
-        <test-method status="FAIL" signature="test016_AlternateAddressEINValidation(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test016_AlternateAddressEINValidation" duration-ms="0" started-at="2022-07-14T16:14:12Z" data-provider="AlternateAddress" finished-at="2022-07-14T16:14:12Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test016_AlternateAddressEINValidation -->
-        <test-method status="FAIL" signature="test014_03_searchPhoneProduct(java.lang.String)[pri:0, instance:com.bt.og.testpages.SanityTest@4466af20]" name="test014_03_searchPhoneProduct" duration-ms="0" started-at="2022-07-14T16:14:12Z" data-provider="SearchPhoneProduct" finished-at="2022-07-14T16:14:12Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:131)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test014_03_searchPhoneProduct(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test014_03_searchPhoneProduct" duration-ms="1" started-at="2022-07-19T12:35:16Z" data-provider="SearchPhoneProduct" finished-at="2022-07-19T12:35:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Harrier Agent]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test014_03_searchPhoneProduct -->
-      </class> <!-- com.bt.og.testpages.SanityTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="625" started-at="2022-07-19T12:35:16Z" finished-at="2022-07-19T12:35:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test014_03_searchPhoneProduct status=SUCCESS method=Regression.test014_03_searchPhoneProduct(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13679" started-at="2022-07-19T12:35:17Z" finished-at="2022-07-19T12:35:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="652" started-at="2022-07-19T12:35:30Z" finished-at="2022-07-19T12:35:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test014_04_PhoneUScatalogue status=SUCCESS method=Regression.test014_04_PhoneUScatalogue(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="test014_04_PhoneUScatalogue(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test014_04_PhoneUScatalogue" duration-ms="0" started-at="2022-07-19T12:35:30Z" data-provider="PhoneUScatalogueData" finished-at="2022-07-19T12:35:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Voicemail reset]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test014_04_PhoneUScatalogue -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13286" started-at="2022-07-19T12:35:31Z" finished-at="2022-07-19T12:35:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test015_01_ErrorWeekendDate(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test015_01_ErrorWeekendDate" duration-ms="22838" started-at="2022-07-19T12:35:44Z" data-provider="ErrorDate" finished-at="2022-07-19T12:36:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Replacement SIM Card]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test015_01_ErrorWeekendDate -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="662" started-at="2022-07-19T12:36:07Z" finished-at="2022-07-19T12:36:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test015_01_ErrorWeekendDate status=SUCCESS method=Regression.test015_01_ErrorWeekendDate(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="13348" started-at="2022-07-19T12:36:08Z" finished-at="2022-07-19T12:36:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test015_02_ErrorPreviousDate(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test015_02_ErrorPreviousDate" duration-ms="18920" started-at="2022-07-19T12:36:21Z" data-provider="ErrorDate" finished-at="2022-07-19T12:36:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Replacement SIM Card]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test015_02_ErrorPreviousDate -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="646" started-at="2022-07-19T12:36:40Z" finished-at="2022-07-19T12:36:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test015_02_ErrorPreviousDate status=SUCCESS method=Regression.test015_02_ErrorPreviousDate(java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="setup" is-config="true" duration-ms="12536" started-at="2022-07-19T12:36:41Z" finished-at="2022-07-19T12:36:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test016_AlternateAddressEINValidation(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="test016_AlternateAddressEINValidation" duration-ms="0" started-at="2022-07-19T12:36:53Z" data-provider="AlternateAddress" finished-at="2022-07-19T12:36:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Desktop PCs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Lenovo ThinkCentre M910s SFF - BT Webtop Build]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test016_AlternateAddressEINValidation -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4]" name="tearDown" is-config="true" duration-ms="633" started-at="2022-07-19T12:36:53Z" finished-at="2022-07-19T12:36:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test016_AlternateAddressEINValidation status=SUCCESS method=Regression.test016_AlternateAddressEINValidation(java.lang.String, java.lang.String)[pri:0, instance:com.bt.og.testpages.Regression@4a94ee4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.bt.og.testpages.Regression -->
+    </test> <!-- Order gateway Test -->
+  </suite> <!-- Order Gateway Application Test Automation Test Suite -->
 </testng-results>

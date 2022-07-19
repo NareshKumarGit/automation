@@ -6,8 +6,17 @@
 		<listener class-name="com.bt.og.retrylistners.MyTransformer"></listener>
 	</listeners>
 	<test name="Order gateway Test">
+	<parameter name = "browser" value="chrome"/>
+	<parameter name = "version" value="103.00"/>
 		<classes>		
 			<class name="com.bt.og.testpages.Regression"></class>
 		</classes>	
-	</test> <!-- com.bt.og.testpages.RegressionTest -->
+	</test> <!-- com.bt.og.testpages.Regression -->
+	<test name="Order gateway Test">
+	<parameter name = "browser" value="chrome"/>
+	<parameter name = "version" value="90.00"/>
+		<classes>		
+			<class name="com.bt.og.testpages.Regression"></class>
+		</classes>	
+	</test> <!-- com.bt.og.testpages.Regression -->
 </suite>

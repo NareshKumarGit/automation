@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="2" name="Failed suite [Order Gateway Application Test Automation Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.bt.og.listner.ExtentReportListener"/>
+    <listener class-name="com.bt.og.retrylistners.MyTransformer"/>
+  </listeners>
+  <test name="Order gateway Test(failed)" parallel="tests">
     <classes>
-      <class name="com.bt.og.testpages.SanityTest">
+      <class name="com.bt.og.testpages.Regression">
         <methods>
-          <include name="test014_04_PhoneUScatalogue"/>
-          <include name="test001_ValidLogin"/>
-          <include name="test010_ITEquipmentProducts"/>
-          <include name="test013_02__RemoveUneededSoftware"/>
-          <include name="test011_NonITEquipmentProducts"/>
-          <include name="test004_CustomerDetails"/>
-          <include name="test015_02_ErrorPreviousDate"/>
+          <include name="test004_CustomerDetails" invocation-numbers="0 0"/>
           <include name="setup"/>
-          <include name="test013_01_ProvideNewSoftware"/>
-          <include name="test013_03_searchProduct"/>
-          <include name="test016_AlternateAddressEINValidation"/>
-          <include name="test014_03_searchPhoneProduct"/>
-          <include name="test015_01_ErrorWeekendDate"/>
-          <include name="test014_02_PhoneProducts"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.bt.og.testpages.SanityTest -->
+      </class> <!-- com.bt.og.testpages.Regression -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Order gateway Test(failed) -->
+</suite> <!-- Failed suite [Order Gateway Application Test Automation Test Suite] -->

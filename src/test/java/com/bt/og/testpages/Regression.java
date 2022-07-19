@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import com.bt.og.base.TestBase;
@@ -55,8 +56,9 @@ public class Regression extends TestBase {
 	}
 
 	@BeforeMethod
-	public void setup() {
-		initialise();
+	@Parameters({"browser","version"})
+	public void setup(String browser,String version) {
+		initialise(browser, version);
 		loginPage = new LoginPage();
 		shoppingBasketpage = new ShoppingBasketPage();
 	}
@@ -68,7 +70,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Test with valid EIN.
-	@Test(dataProvider = "validLoginData", priority = 1)
+	@Test(dataProvider = "validLoginData")
 	public void test001_ValidLogin(String ein, String name) throws InterruptedException {
 		ein = ein.trim();
 		name = name.trim();
@@ -80,7 +82,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Test with invalid login.
-	@Test(priority = 2)
+	@Test
 	public void test002_InvalidLogin() {
 		// Your input was in the correct format but it is NOT a valid EIN.
 		String actualAlertText = "";
@@ -128,7 +130,7 @@ public class Regression extends TestBase {
 
 	// 1.Order search with EIN and OUC.
 	// 2.Test with Order ID
-	@Test(priority = 3)
+	@Test
 	public void test003_OrderSearch() {
 		searchOrderPage = loginPage.clickOnSearchForOrder();
 		String orderId = searchOrderPage.searchOrder(Constant.EIN_UK, "TNA7");
@@ -145,7 +147,7 @@ public class Regression extends TestBase {
 
 	// 1.Login With Valid EIN.
 	// 2.Check Customer details in customer details page.
-	@Test(dataProvider = "customerDetailsData", priority = 4)
+	@Test(dataProvider = "customerDetailsData")
 	public void test004_CustomerDetails(String custname, String custOUC, String custPhoneNumber, String custBoatID,
 			String custUIN, String custComapnyIndicator, String custCountry) {
 		customerDetailsPage = loginPage.doLogin(custUIN);
@@ -172,7 +174,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Test Continue button.
-	@Test(priority = 5)
+	@Test
 	public void test005_CustomerDetailsContinueButton() {
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
 		shoppingBasketpage = customerDetailsPage.clickOnContinueBtn();
@@ -183,7 +185,7 @@ public class Regression extends TestBase {
 
 	// 1.Login with UK EIN and check all tabs are displayed.
 	// 2.Login with US EIN and check all tabs are displayed.
-	@Test(priority = 6)
+	@Test
 	public void test006_VerifyAllTabs() {
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
 		homePage = new HomePage();
@@ -194,7 +196,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Email & IM check Standard email account
-	@Test(priority = 7)
+	@Test
 	public void test007_01_StandardEmailAccount() {
 		boolean result = false;
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
@@ -208,18 +210,16 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Email & IM check Functional account.
-	@Test(priority = 8)
+	@Test
 	public void test007_02_FunctionalAccount() {
-		boolean result = false;
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
 		homePage = new HomePage();
 		emailIMPage = homePage.clickEmailIMTab();
 		switchToFramePFFrame();
-		Assert.assertTrue(result);
 	}
 
 	// 1.Email & IM check Enter PriseMessenger.
-	@Test(priority = 9)
+	@Test
 	public void test007_03_EnterPriseMessenger() {
 		boolean result = false;
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
@@ -233,7 +233,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Email & IM check Incoming fax.
-	@Test(priority = 10)
+	@Test
 	public void test007_04_IncomingFax() {
 		boolean result = false;
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
@@ -247,7 +247,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Email & IM check Email Address Change.
-	@Test(priority = 11)
+	@Test
 	public void test007_05_EmailAddressChange() {
 		boolean result = false;
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
@@ -260,7 +260,7 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Email & IM check Registered Third party email.
-	@Test(priority = 12)
+	@Test
 	public void test007_06_RegisterThirdPartyEmail() {
 		boolean result = false;
 		customerDetailsPage = loginPage.doLogin(Constant.EIN_UK);
@@ -304,14 +304,14 @@ public class Regression extends TestBase {
 	}
 
 	// 1.Check for IT Equipment tab.
-	@Test(priority = 13)
+	@Test
 	public void test008_UKITEquipment() {
 		itEquipment = login(Constant.EIN_UK);
 		Assert.assertTrue(itEquipment.searchBtn.isDisplayed());
 	}
 
 	// 1.Check for Non IT Equipment tab displayed or not.
-	@Test(priority = 14)
+	@Test
 	public void test009_NonUKITEquipment() {
 		login(Constant.EIN_NonUK);
 		waitForElementToBeVisible(productListPage.ReturnToCatalogueBtn, 5);
@@ -334,7 +334,7 @@ public class Regression extends TestBase {
 	 * cart. 8.Check product added to shopping basket. 9.Check Alternative
 	 * Address. 10.Place final order.
 	 */
-	@Test(dataProvider = "ITEquipmentData", priority = 15)
+	@Test(dataProvider = "ITEquipmentData")
 	public void test010_ITEquipmentProducts(String catalogueItem, String productName) {
 		boolean result;
 		itEquipment = login(Constant.EIN_UK);
@@ -407,7 +407,7 @@ public class Regression extends TestBase {
 	 * Shopping cart. 8.Clears the Shopping cart.
 	 */
 
-	@Test(dataProvider = "NonITUKEquipmentData", priority = 16)
+	@Test(dataProvider = "NonITUKEquipmentData")
 	public void test011_NonITEquipmentProducts(String productName) {
 		boolean result;
 		itEquipment = login(Constant.EIN_NonUK);
@@ -433,8 +433,6 @@ public class Regression extends TestBase {
 			Assert.assertTrue(result, "Product is not added to Shopping Basket .");
 			shoppingBasketpage.emptyBasket();
 		}
-		Assert.assertTrue(true);
-
 	}
 
 	/*
@@ -442,7 +440,7 @@ public class Regression extends TestBase {
 	 * 4.Fill All the questions. 5.Add to Shopping cart.
 	 */
 
-	@Test(priority = 17)
+	@Test
 	public void test012_01_CSSProduction() {
 		Assert.assertTrue(true);
 		loginPage = new LoginPage();
@@ -457,7 +455,7 @@ public class Regression extends TestBase {
 	 * IUSERDomainGroupConnection Product. 4.Fill All the questions. 5.Add to
 	 * Shopping cart.
 	 */
-	@Test(priority = 18)
+	@Test
 	public void test012_02_IUSERDomainGroupConnection() {
 		Assert.assertTrue(true);
 		loginPage = new LoginPage();
@@ -473,7 +471,7 @@ public class Regression extends TestBase {
 	 * Shopping cart.
 	 */
 
-	@Test(priority = 19)
+	@Test
 	public void test012_03_OneViewChangesToProfile() {
 		loginPage = new LoginPage();
 		loginPage.doLogin(Constant.EIN_UK);
@@ -498,30 +496,15 @@ public class Regression extends TestBase {
 	 * shopping cart.
 	 */
 
-	@Test(dataProvider = "ProvideNewSoftwareData", priority = 20)
+	@Test(dataProvider = "ProvideNewSoftwareData")
 	public void test013_01_ProvideNewSoftware(String productName) {
-		boolean result = false;
 		loginPage = new LoginPage();
 		loginPage.doLogin(Constant.EIN_UK);
 		homePage = new HomePage();
 		softwarePage = homePage.clickOnsoftwareTab();
 
 		productListPage = softwarePage.clickOnProvideNewSoftBtn();
-		boolean found = productListPage.isProductAvaialble(productName);
-		Assert.assertTrue(found, "Product not found : " + productName);
-		if (found) {
-			productPage = productListPage.clickOnProduct(productName);
-			waitForElementToBeVisible(productPage.addtoBasketBtn, 5);
-			result = productPage.checkProductName(productName);
-			Assert.assertTrue(result, "Product name not matching.");
-			result = productPage.checkAllButtonDisplayed();
-			Assert.assertTrue(result, "All the buttons not displayed.");
-			currentBasketPage = productPage.clickOnAddTobasket();
-			result = currentBasketPage.checkAllButtonsDisplayed();
-			Assert.assertTrue(result, "All the buttons are not displayed in currentbasket.");
-
-		}
-		Assert.assertTrue(true);
+		productListPage.isProductAvaialble(productName);
 	}
 
 	@DataProvider(name = "RemoveUneededSoftwareData")
@@ -538,24 +521,13 @@ public class Regression extends TestBase {
 	 * product to Shopping cart. 8.Check Product added to shopping cart.
 	 * 9.Clears shopping cart.
 	 */
-	@Test(dataProvider = "RemoveUneededSoftwareData", priority = 21)
+	@Test(dataProvider = "RemoveUneededSoftwareData")
 	public void test013_02__RemoveUneededSoftware(String productName) {
 		loginPage = new LoginPage();
 		loginPage.doLogin(Constant.EIN_UK);
 		homePage = new HomePage();
 		softwarePage = homePage.clickOnsoftwareTab();
-		boolean result = false;
 		productListPage = softwarePage.clickOnRemoveUneededSoft();
-		boolean found = productListPage.isProductAvaialble(productName);
-		Assert.assertTrue(found, "Product not found : " + productName);
-		if (found) {
-			productPage = productListPage.clickOnProduct(productName);
-			waitForElementToBeVisible(productPage.viewBasketBtn, 5);
-			result = productPage.checkProductName(productName);
-			Assert.assertTrue(result, "Product name not matching.");
-		}
-		Assert.assertTrue(true);
-
 	}
 
 	@DataProvider(name = "SearchSoftProduct")
@@ -571,7 +543,7 @@ public class Regression extends TestBase {
 	 * 6.Adds the product to Shopping cart. 7.Check Product added to shopping
 	 * cart. 8.Clears shopping cart.
 	 */
-	@Test(dataProvider = "SearchSoftProduct", priority = 22)
+	@Test(dataProvider = "SearchSoftProduct")
 	public void test013_03_searchProduct(String productName) {
 		loginPage = new LoginPage();
 		loginPage.doLogin(Constant.EIN_UK);
@@ -600,7 +572,6 @@ public class Regression extends TestBase {
 			Assert.assertTrue(result, "Product is not added to Shopping Basket.");
 			shoppingBasketpage.emptyBasket();
 		}
-		Assert.assertTrue(true);
 
 	}
 
@@ -609,7 +580,7 @@ public class Regression extends TestBase {
 	 * Working.
 	 */
 
-	@Test(priority = 23)
+	@Test
 	public void test013_04_AtoZLink() {
 		loginPage = new LoginPage();
 		loginPage.doLogin(Constant.EIN_UK);
@@ -638,12 +609,10 @@ public class Regression extends TestBase {
 	 * 1.Login With UK EIN. 2.Go to Phone Tab. 3.Search Product in Software
 	 * catalogue. 4.Check all The Phone catalogue Item displayed.
 	 */
-	@Test(priority = 24)
+	@Test
 	public void test014_01_CheckAllPhoneProductItemDisplayed() {
 		phonePage = phonelogin(Constant.EIN_UK);
-		wait(3000);
 		phonePage.checkAllProductItemDisplayed();
-		Assert.assertTrue(true);
 	}
 
 	@DataProvider(name = "PhoneProductsData")
@@ -659,7 +628,7 @@ public class Regression extends TestBase {
 	 * 5.Fill all the questions. 6.Adds the product to Shopping cart. 7.Check
 	 * Product added to shopping cart. 8.Clears shopping cart.
 	 */
-	@Test(dataProvider = "PhoneProductsData", priority = 25)
+	@Test(dataProvider = "PhoneProductsData")
 	public void test014_02_PhoneProducts(String catalogueItem, String productName) {
 		boolean result;
 		phonePage = phonelogin(Constant.EIN_UK);
@@ -703,7 +672,7 @@ public class Regression extends TestBase {
 	 * 6.Adds the product to Shopping cart. 7.Check Product added to shopping
 	 * cart. 8.Clears shopping cart.
 	 */
-	@Test(dataProvider = "SearchPhoneProduct", priority = 26)
+	@Test(dataProvider = "SearchPhoneProduct")
 	public void test014_03_searchPhoneProduct(String productName) {
 		boolean result;
 		phonePage = phonelogin(Constant.EIN_UK);
@@ -723,7 +692,6 @@ public class Regression extends TestBase {
 			Assert.assertTrue(result, "All the buttons are not displayed in currentbasket.");
 			checkRailoError();
 		}
-
 	}
 
 	@DataProvider(name = "PhoneUScatalogueData")
@@ -739,7 +707,7 @@ public class Regression extends TestBase {
 	 * 5.Fill all the questions. 6.Adds the product to Shopping cart. 7.Check
 	 * Product added to shopping cart. 8.Clears shopping cart.
 	 */
-	@Test(dataProvider = "PhoneUScatalogueData", priority = 27)
+	@Test(dataProvider = "PhoneUScatalogueData")
 	public void test014_04_PhoneUScatalogue(String productName) {
 		boolean result;
 		phonePage = phonelogin(Constant.EIN_US);
@@ -765,7 +733,6 @@ public class Regression extends TestBase {
 			Assert.assertTrue(result, "Product is not added to Shopping Basket.");
 			shoppingBasketpage.emptyBasket();
 		}
-
 	}
 
 	@DataProvider(name = "ErrorDate")
@@ -780,7 +747,7 @@ public class Regression extends TestBase {
 	 * search for product in product list. 4.Add Product to current basket.
 	 * 5.Fill weekend date in calender field Check for validation error.
 	 */
-	@Test(dataProvider = "ErrorDate", priority = 28)
+	@Test(dataProvider = "ErrorDate")
 	public void test015_01_ErrorWeekendDate(String productName) {
 		boolean result;
 		phonePage = phonelogin(Constant.EIN_UK);
@@ -813,7 +780,7 @@ public class Regression extends TestBase {
 	 * search for product in product list. 4.Add Product to current basket.
 	 * 5.Fill Proevious date in calender field Check for validation error.
 	 */
-	@Test(dataProvider = "ErrorDate", priority = 29)
+	@Test(dataProvider = "ErrorDate")
 	public void test015_02_ErrorPreviousDate(String productName) {
 		boolean result;
 		phonePage = phonelogin(Constant.EIN_UK);
@@ -855,69 +822,69 @@ public class Regression extends TestBase {
 	 * Product added to shopping cart. 8.Check out the product. 9.Change to
 	 * alternate Address. 10.Check EIN validation in Alternate address page.
 	 */
-	@Test(dataProvider = "AlternateAddress", priority = 30)
+	@Test(dataProvider = "AlternateAddress")
 	public void test016_AlternateAddressEINValidation(String catalogueItem, String productName) {
-		
-		 boolean result;
-		 itEquipment = login(Constant.EIN_UK);
-		 wait(3000);
-		 productListPage = itEquipment.clicOnProduct(catalogueItem);
-		 boolean found = productListPage.isProductAvaialble(productName);
-		 Assert.assertTrue(found, "Product not found : " + productName);
-		 if (found) {
-		 productPage = productListPage.clickOnProduct(productName);
-		 waitForElementToBeVisible(productPage.addtoBasketBtn, 5);
-		
-		 result = productPage.checkProductName(productName);
-		 Assert.assertTrue(result, "Product name not matching.");
-		 result = productPage.checkAllButtonDisplayed();
-		 Assert.assertTrue(result, "All the buttons not displayed.");
-		 currentBasketPage = productPage.clickOnAddTobasket();
-		
-		 result = currentBasketPage.checkAllButtonsDisplayed();
-		 Assert.assertTrue(result, "All the buttons are not displayed in currentbasket.");
-		 currentBasketPage.fillCurrentBasket(productName);
-		 currentBasketPage.clickOnAddToBasket();
-		
-		 shoppingBasketpage = currentBasketPage.clickOnCheckOut();
-		 shoppingBasketpage.waitForShoppingBasketToDisplay();
-		 result = shoppingBasketpage.searchForProductInTable(productName);
-		 Assert.assertTrue(result, "Product is not added to Shopping Basket.");
-		 checkOutPage = shoppingBasketpage.clickOnCheckOut();
-		
-		 switchToFramePFFrame();
-		 classOfWorkJobNumberPage = new ClassOfWorkJobNumber();
-		 waitForElementToClickable(classOfWorkJobNumberPage.continueCheckOutBtn,
-		 10);
-		 classOfWorkJobNumberPage.clickOnContinueCheckOut();
-		
-		 switchToFramePFFrame();
-		 checkOutPage.typeOrderSummary("Test Order Selenium");
-		 checkOutPage.typeBusinessJustification("Test Order Selenium Please ignore.");
-		 deliveryAddresspage = checkOutPage.clickOnContinueCheckout();
-		
-		 switchToFramePFFrame();
-		 waitForElementToBeVisible(deliveryAddresspage.useAnotherAddress, 10);
-		 deliveryAddresspage.clickOnUseAnotherAddress();
-		
-		 switchToFramePFFrame();
-		 deliveryAddresspage.typeSelectdDeliveryTo("Option 1: I would like it delivered to someone else at their registered address.");
-		 deliveryAddresspage.typeDeliveryUIN("6120926467");
-		 deliveryAddresspage.clickOnContinue();
-		 String actualAlertText = "";
-		 String expectedAlertText = "Please enter at most 9 characters in the\"UIN\" field.";
-		 if (isAlertPresent()) {
-		 actualAlertText = getAlertText();
-		 alertAccept();
-		 System.out.println(actualAlertText);
-		 if (actualAlertText.contains(expectedAlertText)) {
-		 Assert.assertTrue(true);
-		 }
-		 } else {
-		 Assert.assertTrue(false, "Wrong EIN format alert message is wrong");
-		 }
-		
-		 }
+
+		boolean result;
+		itEquipment = login(Constant.EIN_UK);
+		wait(3000);
+		productListPage = itEquipment.clicOnProduct(catalogueItem);
+		boolean found = productListPage.isProductAvaialble(productName);
+		Assert.assertTrue(found, "Product not found : " + productName);
+		if (found) {
+			productPage = productListPage.clickOnProduct(productName);
+			waitForElementToBeVisible(productPage.addtoBasketBtn, 5);
+
+			result = productPage.checkProductName(productName);
+			Assert.assertTrue(result, "Product name not matching.");
+			result = productPage.checkAllButtonDisplayed();
+			Assert.assertTrue(result, "All the buttons not displayed.");
+			currentBasketPage = productPage.clickOnAddTobasket();
+
+			result = currentBasketPage.checkAllButtonsDisplayed();
+			Assert.assertTrue(result, "All the buttons are not displayed in currentbasket.");
+			currentBasketPage.fillCurrentBasket(productName);
+			currentBasketPage.clickOnAddToBasket();
+
+			shoppingBasketpage = currentBasketPage.clickOnCheckOut();
+			shoppingBasketpage.waitForShoppingBasketToDisplay();
+			result = shoppingBasketpage.searchForProductInTable(productName);
+			Assert.assertTrue(result, "Product is not added to Shopping Basket.");
+			checkOutPage = shoppingBasketpage.clickOnCheckOut();
+
+			switchToFramePFFrame();
+			classOfWorkJobNumberPage = new ClassOfWorkJobNumber();
+			waitForElementToClickable(classOfWorkJobNumberPage.continueCheckOutBtn, 10);
+			classOfWorkJobNumberPage.clickOnContinueCheckOut();
+
+			switchToFramePFFrame();
+			checkOutPage.typeOrderSummary("Test Order Selenium");
+			checkOutPage.typeBusinessJustification("Test Order Selenium Please ignore.");
+			deliveryAddresspage = checkOutPage.clickOnContinueCheckout();
+
+			switchToFramePFFrame();
+			waitForElementToBeVisible(deliveryAddresspage.useAnotherAddress, 10);
+			deliveryAddresspage.clickOnUseAnotherAddress();
+
+			switchToFramePFFrame();
+			deliveryAddresspage.typeSelectdDeliveryTo(
+					"Option 1: I would like it delivered to someone else at their registered address.");
+			deliveryAddresspage.typeDeliveryUIN("6120926467");
+			deliveryAddresspage.clickOnContinue();
+			String actualAlertText = "";
+			String expectedAlertText = "Please enter at most 9 characters in the\"UIN\" field.";
+			if (isAlertPresent()) {
+				actualAlertText = getAlertText();
+				alertAccept();
+				System.out.println(actualAlertText);
+				if (actualAlertText.contains(expectedAlertText)) {
+					Assert.assertTrue(true);
+				}
+			} else {
+				Assert.assertTrue(false, "Wrong EIN format alert message is wrong");
+			}
+
+		}
 	}
 
 }

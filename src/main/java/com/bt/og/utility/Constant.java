@@ -3,7 +3,7 @@ package com.bt.og.utility;
 public class Constant {
 
 	// Browser
-	public static String browser = "ie";
+	public static String browser = "chrome";
 	// Select Execution environment
 	public static boolean setup_Dev = false;
 	public static boolean setup_Prod = true;
